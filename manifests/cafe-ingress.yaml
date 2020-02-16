@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cafe-ingress
+spec:
+  rules:
+  - host: ae08f0ac350ec11eaaf2e02f3a87656f-1244883645.us-east-1.elb.amazonaws.com
+    http:
+      paths:
+      - path: /coffee
+        backend:
+          serviceName: coffee-svc
+          servicePort: 80
