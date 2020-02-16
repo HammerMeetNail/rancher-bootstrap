@@ -37,9 +37,9 @@ After adding the community charts, perform the following:
     * Validate with `kubectl --kubeconfig kubeconfig describe svc nginx-ingress --namespace=nginx-ingress`
     * Grab the DNS name for the new AWS Load Balancer, found at `LoadBalancer Ingress` field
 4. Create a `Deployment` and `Service` 
-    * kubectl --kubeconfig kubeconfig apply -f manifests/cafe.yaml`
+    * `kubectl --kubeconfig kubeconfig apply -f manifests/cafe.yaml`
 5. Create an `Ingress`
-    * kubectl --kubeconfig kubeconfig apply -f manifests/cafe-ingress.yaml`
+    * `kubectl --kubeconfig kubeconfig apply -f manifests/cafe-ingress.yaml`
 6. Verify that the service is now exposed publicly by visiting `LoadBalancerDNSName/coffee`
     * Should return something like 
     ```
